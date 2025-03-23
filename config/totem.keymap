@@ -50,9 +50,19 @@
             quick-tap-ms = <200>;
         };
 
+        alt_quick: alt_quick {
+            compatible = "zmk,behavior-macro";
+            label = "AltQuick"
+            bindings = <
+              &kp LALT
+              &mo QUICK
+            >;
+        };
+
         // lon: toggle_layer_on_only {
         //     compatible = "zmk,behavior-toggle-layer";
         //     #binding-cells = <1>;
+        //     bindings = <&kp>;
         //     display-name = "Toggle Layer On";
         //     toggle-mode = "on";
         // };
