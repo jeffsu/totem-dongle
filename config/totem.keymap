@@ -42,7 +42,6 @@
         hp: hold_preferred {
             compatible = "zmk,behavior-mod-tap";
             flavor = "hold-preferred";
-            #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
             quick-tap-ms = <250>;
@@ -51,7 +50,6 @@
         alt_quick: alt_quick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            label = "AltQuick";
             bindings = <
               &kp LALT
               &mo QUICK
@@ -220,12 +218,13 @@
         quick_layer {
             label = "QUICK";
             bindings = <
+
             //               ┏┳┳━━━━━━━━━━━┳┳┳━━━━━━━━━━━┳┳┳━━━━━━━━━━━┳┳┳━━━━━━━━━━━┳┳┳━━━━━━━━━━━┳┳┓  ┏┳┳━━━━━━━━━━━┳┳┳━━━━━━━━━━━┳┳┳━━━━━━━━━━━┳┳┳━━━━━━━━━━━┳┳┳━━━━━━━━━━━┳┳┓
-                             &trans        &trans        &trans        &trans        &trans             &trans        &kp UNDER     &kp MINUS     &trans        &trans        
+                             &trans        &trans        &trans        &trans        &trans             &sk LSHFT     &sk LCTRL     &sk LGUI      &sk LALT      &trans        
             //               ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋
                              &trans        &trans        &trans        &trans        &trans             &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &trans        
             // ┏┳┳━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┳┳┓ 
-               &trans        &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &trans        &trans
+               &trans        &trans        &trans        &trans        &trans        &trans             &trans        &kp UNDER     &kp MINUS        &trans        &trans        &trans
             // ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
                                                          &trans        &trans        &trans             &kp TAB       &trans        &trans
             //                                           ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛  ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
