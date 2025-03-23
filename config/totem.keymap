@@ -41,22 +41,14 @@
 / {
 
     behaviors {
-        // mt: mod_tap_preferred {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     bindings = <&mo 0 &kp 1>
-        //     tapping-term-ms = <200>;
-        //     flavor = "tap-preferred";
-        //     quick-tap-ms = <200>;
-        // };
-
-        shift_esc: shift_esc {
+        hp: hold_preferred {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp ESC>;
             flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
         };
-    
 
         // lon: toggle_layer_on_only {
         //     compatible = "zmk,behavior-toggle-layer";
@@ -109,7 +101,7 @@
             // ┏┳┳━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┳┳┓ 
                &kp Q         &kp Z         &mt LALT X    &mt LGUI C    &mt LCTL  V   &kp B              &kp N         &mt LCTL M   &mt LGUI COMMA &mt LALT DOT  &kp FSLH      &kp PIPE
             // ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
-                                                         &kp DEL       &lt SYM BSPC  &lt NAV RET        &shift_esc    &lt NUM SPACE &key_repeat
+                                                         &kp DEL       &lt SYM BSPC  &lt NAV RET        &hp LSHFT ESC &lt NUM SPACE &key_repeat
             //                                           ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛  ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
             >;
         };
