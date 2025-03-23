@@ -50,6 +50,7 @@
 
         alt_quick: alt_quick {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             label = "AltQuick";
             bindings = <
               &kp LALT
