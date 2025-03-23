@@ -41,23 +41,18 @@
 / {
 
     behaviors {
-        tp: tap_preferred {
-            global-quick-tap;
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <200>;
-        };
-    
-        // hp: hold_preferred {
-        //     global-quick-tap;
+        // mt: mod_tap_preferred {
         //     compatible = "zmk,behavior-hold-tap";
         //     #binding-cells = <2>;
-        //     quick-tap-ms = <200>;
-        //     flavor = "hold-preferred";
+        //     bindings = <&mo 0 &kp 1>
         //     tapping-term-ms = <200>;
+        //     flavor = "tap-preferred";
+        //     quick-tap-ms = <200>;
         // };
+    
+        hp = &mt {
+            flavor = "hold-preferred";
+        };
 
         // lon: toggle_layer_on_only {
         //     compatible = "zmk,behavior-toggle-layer";
@@ -108,7 +103,7 @@
             //               ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫
                              &kp A         &kp S         &kp D         &lt QUICK F   &kp G              &kp H         &kp J         &kp K         &kp L         &kp SEMI
             // ┏┳┳━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┳┳┓ 
-               &kp Q         &kp Z         &tp LALT X    &tp LGUI C    &tp LCTL  V   &kp B              &kp N         &tp LCTL M   &tp LGUI COMMA &tp LALT DOT  &kp FSLH      &kp PIPE
+               &kp Q         &kp Z         &mt LALT X    &mt LGUI C    &mt LCTL  V   &kp B              &kp N         &mt LCTL M   &mt LGUI COMMA &mt LALT DOT  &kp FSLH      &kp PIPE
             // ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
                                                          &kp DEL       &lt SYM BSPC  &lt NAV RET        &mt LSHFT ESC &lt NUM SPACE &key_repeat
             //                                           ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛  ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
