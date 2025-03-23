@@ -51,19 +51,19 @@
         alt_quick: alt_quick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-              &kp LALT
-              &mo QUICK
-            >;
+            bindings
+                = <&macro_press &kp LALT &mo QUICK>
+                , <&macro_release &kp LALT &mo QUICK>
+                ;
         };
 
         cmd_quick: cmd_quick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-              &kp LGUI
-              &mo QUICK
-            >;
+            bindings 
+                = <&macro_press &kp LGUI &mo QUICK>
+                , <&macro_release &kp LGUI &mo QUICK>
+                ;
         };
         
         lon: toggle_layer_on_only {
