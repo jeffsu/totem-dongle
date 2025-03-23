@@ -25,17 +25,15 @@
 
 
 &mt {
-    quick-tap-ms = <200>;
-    global-quick-tap;
+    quick-tap-ms = <250>;
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
 };
 
 &lt {
-    global-quick-tap;
-    quick-tap-ms = <200>;
+    quick-tap-ms = <250>;
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <20>;
 };
 
 / {
@@ -47,12 +45,12 @@
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <250>;
         };
 
         alt_quick: alt_quick {
             compatible = "zmk,behavior-macro";
-            label = "AltQuick"
+            label = "AltQuick";
             bindings = <
               &kp LALT
               &mo QUICK
@@ -111,7 +109,7 @@
             // ┏┳┳━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┳┳┓ 
                &kp Q         &kp Z         &mt LALT X    &mt LGUI C    &mt LCTL  V   &kp B              &kp N         &mt LCTL M   &mt LGUI COMMA &mt LALT DOT  &kp FSLH      &kp PIPE
             // ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
-                                                         &kp DEL       &lt SYM BSPC  &lt NAV RET        &hp LSHFT ESC &lt NUM SPACE &key_repeat
+                                                         &alt_quick    &lt SYM BSPC  &lt NAV RET        &hp LSHFT ESC &lt NUM SPACE &key_repeat
             //                                           ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛  ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
             >;
         };
