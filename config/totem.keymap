@@ -41,37 +41,37 @@
 / {
 
     behaviors {
-        km: keeb_modtap {
-            global-quick-tap;
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <200>;
-        };
+        // km: keeb_modtap {
+        //     global-quick-tap;
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <200>;
+        //     flavor = "tap-preferred";
+        //     quick-tap-ms = <200>;
+        // };
     
-        hp: hold_preferred {
-            global-quick-tap;
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            quick-tap-ms = <200>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-        };
+        // hp: hold_preferred {
+        //     global-quick-tap;
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     quick-tap-ms = <200>;
+        //     flavor = "hold-preferred";
+        //     tapping-term-ms = <200>;
+        // };
 
-        lon: toggle_layer_on_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer On";
-            toggle-mode = "on";
-        };
+        // lon: toggle_layer_on_only {
+        //     compatible = "zmk,behavior-toggle-layer";
+        //     #binding-cells = <1>;
+        //     display-name = "Toggle Layer On";
+        //     toggle-mode = "on";
+        // };
 
-        loff: toggle_layer_off_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer Off";
-            toggle-mode = "off";
-        };
+        // loff: toggle_layer_off_only {
+        //     compatible = "zmk,behavior-toggle-layer";
+        //     #binding-cells = <1>;
+        //     display-name = "Toggle Layer Off";
+        //     toggle-mode = "off";
+        // };
     };
 
     combos {
@@ -108,9 +108,9 @@
             //               ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫
                              &kp A         &kp S         &kp D         &lt QUICK F   &kp G              &kp H         &kp J         &kp K         &kp L         &kp SEMI
             // ┏┳┳━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┳┳┓ 
-               &kp Q         &mt Z         &km LALT X    &km LGUI C    &km LCTL  V   &kp B              &kp N         &km LCTL M   &km LGUI COMMA &km LALT DOT  &kp FSLH      &kp PIPE
+               &kp Q         &mt Z         &mt LALT X    &mt LGUI C    &mt LCTL  V   &kp B              &kp N         &mt LCTL M   &mt LGUI COMMA &mt LALT DOT  &kp FSLH      &kp PIPE
             // ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
-                                                         &kp DEL       &lt SYM BSPC  &lt NAV RET        &hp LSHFT ESC &lt NUM SPACE &kp BSPC
+                                                         &kp DEL       &lt SYM BSPC  &lt NAV RET        &mt LSHFT ESC &lt NUM SPACE &kp BSPC
             //                                           ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛  ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
             >;
         };
@@ -126,7 +126,7 @@
             //               ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋
                              &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &trans        
             // ┏┳┳━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┳┳┓ 
-               &trans        &trans        &trans        &km LCTL C    &km LGUI V    &trans             &trans        &km LGUI M   &km LCTL COMMA &trans        &trans        &trans         
+               &trans        &trans        &trans        &mt LCTL C    &mt LGUI V    &trans             &trans        &mt LGUI M   &mt LCTL COMMA &trans        &trans        &trans         
             // ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
                                                          &trans        &trans        &trans             &trans        &trans        &trans
             //                                           ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛  ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
@@ -153,9 +153,9 @@
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         sym_layer {
-            // [quotes] [brackets]
-            // [symbols          ]
-            // [ +-=  ] [ \/|    ]
+            // [] [quotes  ]
+            // [symbols    ]
+            // [] [brackets]
             label =                                                                                 "SYM";
             bindings = <
             //               ┏━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┓  ┏━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┓
@@ -201,7 +201,8 @@
 
             bindings = <
             //               ┏━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┓  ┏━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┓
-                             &lon WIN      &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &loff WIN        
+                             &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &trans
+                            //  &lon WIN      &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &loff WIN        
             //               ┣━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━┫  ┣━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━┫ 
                              &trans        &trans        &trans        &none         &trans             &trans        &trans        &trans        &trans        &trans        
             // ┏━┳━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━┫  ┣━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━┳━┓
