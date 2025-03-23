@@ -41,14 +41,14 @@
 / {
 
     behaviors {
-        // km: keeb_modtap {
-        //     global-quick-tap;
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <200>;
-        //     flavor = "tap-preferred";
-        //     quick-tap-ms = <200>;
-        // };
+        tp: tap_preferred {
+            global-quick-tap;
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <200>;
+        };
     
         // hp: hold_preferred {
         //     global-quick-tap;
@@ -108,9 +108,9 @@
             //               ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫
                              &kp A         &kp S         &kp D         &lt QUICK F   &kp G              &kp H         &kp J         &kp K         &kp L         &kp SEMI
             // ┏┳┳━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┳┳┓ 
-               &kp Q         &kp Z         &mt LALT X    &mt LGUI C    &mt LCTL  V   &kp B              &kp N         &mt LCTL M   &mt LGUI COMMA &mt LALT DOT  &kp FSLH      &kp PIPE
+               &kp Q         &kp Z         &tp LALT X    &tp LGUI C    &tp LCTL  V   &kp B              &kp N         &tp LCTL M   &tp LGUI COMMA &tp LALT DOT  &kp FSLH      &kp PIPE
             // ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
-                                                         &kp DEL       &lt SYM BSPC  &lt NAV RET        &mt LSHFT ESC &lt NUM SPACE &kp BSPC
+                                                         &kp DEL       &lt SYM BSPC  &lt NAV RET        &mt LSHFT ESC &lt NUM SPACE &key_repeat
             //                                           ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛  ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
             >;
         };
