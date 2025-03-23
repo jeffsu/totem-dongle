@@ -56,6 +56,15 @@
               &mo QUICK
             >;
         };
+
+        cmd_quick: cmd_quick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+              &kp LGUI
+              &mo QUICK
+            >;
+        };
         
         lon: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
@@ -108,7 +117,7 @@
             // ┏┳┳━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┳┳┓ 
                &kp Q         &kp Z         &mt LALT X    &mt LGUI C    &mt LCTL  V   &kp B              &kp N         &mt LCTL M   &mt LGUI COMMA &mt LALT DOT  &kp FSLH      &kp PIPE
             // ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
-                                                         &alt_quick    &lt SYM BSPC  &lt NAV RET        &hp MOD_LSFT ESC &lt NUM SPACE &key_repeat
+                                                         &cmd_quick    &lt SYM BSPC  &lt NAV RET        &hp MOD_LSFT ESC &lt NUM SPACE &key_repeat
             //                                           ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛  ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
             >;
         };
@@ -126,7 +135,7 @@
             // ┏┳┳━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┳┳┓ 
                &trans        &trans        &trans        &mt LCTL C    &mt LGUI V    &trans             &trans        &mt LGUI M   &mt LCTL COMMA &trans        &trans        &trans         
             // ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋┫  ┣╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━╋╋╋━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
-                                                         &trans        &trans        &trans             &trans        &trans        &trans
+                                                         &alt_quick    &trans        &trans             &trans        &trans        &trans
             //                                           ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛  ┗┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┻━━━━━━━━━━━┻┻┛
             >;
         };
