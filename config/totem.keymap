@@ -16,12 +16,13 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define BASE  0
-#define WIN   1
+#define WBASE 1
 #define NUM   2 
 #define SYM   3
 #define NAV   4 
 #define ADJ   5 
-#define QUICK 6 
+#define WADJ  6 
+#define QUICK 7 
 
 &mt {
     quick-tap-ms = <250>;
@@ -97,6 +98,11 @@
         tri_layer {
             if-layers = <SYM NUM>;
             then-layer = <ADJ>;
+        };
+
+        wtri_layer {
+            if-layers = <WBASE ADJ>;
+            then-layer = <WADJ>;
         };
     };
 
@@ -208,7 +214,7 @@
 
             bindings = <
             //               ┏━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┓  ┏━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┓
-                             &lon WIN      &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &loff WIN        
+                             &lon WIN      &trans        &trans        &trans        &trans             &trans        &kp LG(MINUS) &kp LG(PLUS)  &trans        &loff WIN        
             //               ┣━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━┫  ┣━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━┫ 
                              &trans        &trans        &trans        &none         &trans             &kp K_PREV &kp K_PLAY_PAUSE &kp K_MUTE    &kp K_NEXT    &trans        
             // ┏━┳━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━┫  ┣━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━┳━┓
@@ -223,6 +229,23 @@
 //                                  &trans        &trans  &trans    &trans  &trans  &trans
             >;
         };
+
+        wadjust_layer {
+            label = "ADJ";
+
+            bindings = <
+            //               ┏━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┓  ┏━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┓
+                             &trans        &trans        &trans        &trans        &trans             &trans        &kp LC(MINUS) &kp LC(PLUS)  &trans        &trans
+            //               ┣━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━┫  ┣━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━┫ 
+                             &kp W         &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &trans
+            // ┏━┳━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━┫  ┣━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━┳━┓
+               &trans        &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &trans        &trans
+            // ┗━┻━━━━━━━━━━━┻━┻━━━━━━━━━━━┻━┻━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━┫  ┣━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━╋━╋━━━━━━━━━━━┻━┻━━━━━━━━━━━┻━┻━━━━━━━━━━━┻━┻━━━━━━━━━━━┻━┛
+                                                         &trans        &trans        &trans             &trans        &trans        &trans
+            //                                           ┗━┻━━━━━━━━━━━┻━┻━━━━━━━━━━━┻━┻━━━━━━━━━━━┻━┛  ┗━┻━━━━━━━━━━━┻━┻━━━━━━━━━━━┻━┻━━━━━━━━━━━┻━┛
+            >;
+        };
+
 
         quick_layer {
             label = "QUICK";
