@@ -98,8 +98,15 @@
             timeout-ms = <50>;
             key-positions = <15 16>;
             bindings = <&kp ESC>;
+            layers = <BASE WBASE>; 
         };
 
+        combo_quote {
+            timeout-ms = <50>;
+            key-positions = <6 16>;
+            bindings = <&kp SQT>;
+            layers = <BASE WBASE>; 
+        };
     };
 
     conditional_layers {
