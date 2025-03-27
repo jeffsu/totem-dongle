@@ -94,17 +94,11 @@
     combos {
         compatible = "zmk,combos";
 
+
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <15 16>;
+            key-positions = <27 36>;
             bindings = <&kp ESC>;
-            layers = <BASE WBASE>; 
-        };
-
-        combo_quote {
-            timeout-ms = <50>;
-            key-positions = <24 33>;
-            bindings = <&kp SQT>;
             layers = <BASE WBASE>; 
         };
     };
