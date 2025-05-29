@@ -38,6 +38,10 @@
     tapping-term-ms = <200>;
 };
 
+&sl {
+    release-after-ms = <2000>;
+};
+
 / {
 
 
