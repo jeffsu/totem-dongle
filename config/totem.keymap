@@ -127,12 +127,6 @@
             layers = <BASE>; 
         };
 
-        combo_dec_font {
-            timeout-ms = <50>;
-            key-positions = <16 6>;
-            bindings = <&kp LG(MN)>;
-            layers = <BASE>; 
-        };
         // j,k -> tab
         combo_tab {
             timeout-ms = <50>;
