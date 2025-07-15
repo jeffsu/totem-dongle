@@ -123,10 +123,6 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <SYM NUM>;
-            then-layer = <ADJ>;
-        };
 
         wquick_layer {
             if-layers = <WBASE QUICK>;
@@ -258,7 +254,7 @@
         };
        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
         wadjust_layer {
-            label =                                                                                 "ADJ";
+            label =                                                                                 "WADJ";
             bindings = <
             //               ┏━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┓  ┏━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┳━━━━━━━━━━━┳━┓
                              &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &trans
