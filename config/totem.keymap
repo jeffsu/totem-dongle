@@ -101,30 +101,9 @@
 
         combo_ctrl_a {
             timeout-ms = <50>;
-            key-positions = <16 27>;
+            key-positions = <6 7>;
             bindings = <&kp LC(A)>;
             layers = <BASE WBASE>; 
-        };
-
-        combo_screen_shot {
-            timeout-ms = <50>;
-            key-positions = <17 28>;
-            bindings = <&kp LS(LG(N5))>;
-            layers = <BASE>; 
-        };
-
-        combo_inc_font {
-            timeout-ms = <50>;
-            key-positions = <7 17>;
-            bindings = <&kp LG(PLUS)>;
-            layers = <BASE>; 
-        };
-
-        combo_dec_font {
-            timeout-ms = <50>;
-            key-positions = <6 16>;
-            bindings = <&kp LG(MINUS)>;
-            layers = <BASE>; 
         };
 
         // j,k -> tab
@@ -133,6 +112,12 @@
             key-positions = <16 17>;
             bindings = <&kp TAB>;
             layers = <BASE WBASE>;
+        };
+
+        combo_cmd_tick {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp LG(GRAVE)>;
         };
     };
 
