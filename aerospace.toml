@@ -101,8 +101,22 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     # alt-shift-semicolon = 'mode service'
     alt-w = 'mode workspace'
+    alt-f = 'mode f'
 
- [mode.workspace.binding]
+[mode.f.binding]
+    esc = 'mode main'
+
+    j = 'focus down'
+    k = 'focus up'
+    h = 'focus right'
+    l = 'focus left'
+
+    m = 'workspace 1'
+    comma = 'workspace 2'
+    period = 'workspace 3'
+
+
+[mode.workspace.binding]
     esc = 'mode main'
 
     a = 'workspace 1'
