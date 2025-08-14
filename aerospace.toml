@@ -68,19 +68,23 @@ automatically-unhide-macos-hidden-apps = false
     alt-esc = 'layout accordion horizontal vertical'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    alt-h = 'focus left'
-    alt-j = 'focus down'
-    alt-k = 'focus up'
-    alt-l = 'focus right'
+    alt-h = 'focus left  --boundaries-action wrap-around-the-workspace'
+    alt-j = 'focus down  --boundaries-action wrap-around-the-workspace'
+    alt-k = 'focus up    --boundaries-action wrap-around-the-workspace'
+    alt-l = 'focus right --boundaries-action wrap-around-the-workspace'
 
-    alt-shift-h = 'move left'
-    alt-shift-j = 'move down'
-    alt-shift-k = 'move up'
-    alt-shift-l = 'move right'
+    alt-y = 'focus-monitor --wrap-around prev'
+    alt-o = 'focus-monitor --wrap-around next'
+    # alt-i = 'focus-monitor --wrap-around up'
+    # alt-l = 'focus-monitor --wrap-around right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
     alt-u = 'workspace prev'
     alt-i = 'workspace next'
+
+    alt-m     = 'resize smart -50'
+    alt-comma = 'resize smart +50'
+
     alt-r = 'reload-config'
 
     # alt-shift-h = 'move left'
@@ -89,8 +93,6 @@ automatically-unhide-macos-hidden-apps = false
     # alt-shift-l = 'move right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-    alt-m = 'resize smart -50'
-    alt-comma = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
