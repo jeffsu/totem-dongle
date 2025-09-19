@@ -76,11 +76,13 @@ automatically-unhide-macos-hidden-apps = false
     alt-y = 'focus-monitor --wrap-around prev'
     alt-o = 'focus-monitor --wrap-around next'
     # alt-i = 'focus-monitor --wrap-around up'
-    # alt-l = 'focus-monitor --wrap-around right'
 
+    # alt-l = 'focus-monitor --wrap-around right'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
     alt-u = 'workspace prev'
     alt-i = 'workspace next'
+# alt-j = 'move-node-to-workspace prev'
+# alt-k = 'move-node-to-workspace next'
 
     alt-m     = 'resize smart -50'
     alt-comma = 'resize smart +50'
@@ -132,16 +134,15 @@ automatically-unhide-macos-hidden-apps = false
     l = 'workspace 9'
     semicolon = 'workspace 10'
 
-    shift-a = 'move-node-to-workspace 1'
-    shift-s = 'move-node-to-workspace 2'
-    shift-d = 'move-node-to-workspace 3'
-    shift-f = 'move-node-to-workspace 4'
-    shift-g = 'move-node-to-workspace 5'
-    shift-h = 'move-node-to-workspace 6'
-    shift-j = 'move-node-to-workspace 7'
-    shift-k = 'move-node-to-workspace 8'
-    shift-l = 'move-node-to-workspace 9'
-    shift-semicolon = 'move-node-to-workspace 10'
+    1 = 'move-node-to-workspace 1'
+    2 = 'move-node-to-workspace 2'
+    3 = 'move-node-to-workspace 3'
+    4 = 'move-node-to-workspace 4'
+    5 = 'move-node-to-workspace 5'
+    6 = 'move-node-to-workspace 6'
+    7 = 'move-node-to-workspace 7'
+    8 = 'move-node-to-workspace 8'
+    9 = 'move-node-to-workspace 9'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
