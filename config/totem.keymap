@@ -16,8 +16,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Include zmk-helpers for convenient macros and behaviors
-#include "../zmk-helpers/helper.h"
-#include "../zmk-helpers/key-labels/totem.h"
+#include "zmk-helpers/helper.h"
+#include "zmk-helpers/key-labels/totem.h"
 
 #define BASE     0
 #define COLEMAK  1
