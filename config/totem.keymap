@@ -15,16 +15,25 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+// Include zmk-helpers for convenient macros and behaviors
+#include "../zmk-helpers/helper.h"
+#include "../zmk-helpers/key-labels/totem.h"
+
 #define BASE     0
-#define COLEMAK  1 
+#define COLEMAK  1
 #define WBASE    2
-#define NUM      3 
+#define NUM      3
 #define SYM      4
-#define NAV      5 
-#define ADJ      6 
-#define WADJ     7 
-#define QUICK    8 
+#define NAV      5
+#define ADJ      6
+#define WADJ     7
+#define QUICK    8
 #define WQUICK   9
+
+// Key position definitions for timeless homerow mods
+#define KEYS_L 0 1 2 3 4 10 11 12 13 14 21 22 23 24 25  // Left hand keys
+#define KEYS_R 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30  // Right hand keys
+#define THUMBS 32 33 34 35 36 37                        // Thumb keys
 
 &mt {
     quick-tap-ms = <250>;
