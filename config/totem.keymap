@@ -101,8 +101,7 @@
         combo_num_shift {
             timeout-ms = <50>;
             key-positions = <34 35>;
-            slow-release = true;
-            bindings = <&mo NUM &kp LSFT>;
+            slow-release;
             layers = <BASE WBASE>; 
         };
     };
