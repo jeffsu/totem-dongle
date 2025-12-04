@@ -103,7 +103,7 @@
             key-positions = <34 35>;
             slow-release;
             layers = <BASE WBASE>; 
-            bindings = <&mo NUM, &kp LSFT>;
+            bindings = <&mo NUM &kp LSFT>;
         };
     };
 
